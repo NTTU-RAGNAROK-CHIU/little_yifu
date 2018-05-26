@@ -25,7 +25,9 @@ Syntax highlighted code block
 
 [Link](url) and ![Image](src)
 ```
-
+![image](https://github.com/NTTU-RAGNAROK-CHIU/little_yifu/blob/master/3.JPG)
+![image](https://github.com/NTTU-RAGNAROK-CHIU/little_yifu/blob/master/2.JPG)
+![image](https://github.com/NTTU-RAGNAROK-CHIU/little_yifu/blob/master/1.JPG)
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
 ### Jekyll Themes
