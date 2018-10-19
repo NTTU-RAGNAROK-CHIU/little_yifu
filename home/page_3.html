@@ -81,19 +81,33 @@ p.a {
     box-sizing: border-box;
 }
 
+#content-block {
+    box-sizing: content-box;
+    top: -130px;
+}
+
+#padding-block {
+    top: 50px;
+    box-sizing: padding-box;
+}
+
+#border-block {
+    top: 250px;
+    box-sizing: padding-box;
+}
+
 #container {
     position: relative;
     display: block;
     width: 300px;
     height: 500px;
     margin: auto;
-
     text-align: center;
-    line-height: 40px;
+    line-height: 20px;
 }
 
 #content-block:after {
-    content: "ㄧ蟹堡王";
+    content: "蟹堡王";
 }
 #padding-block:after {
     content: "東品珍";
@@ -110,7 +124,7 @@ p.a {
     width: 100%;
     height: 100px;
     margin: 100px auto;
-    padding: 10px;
+    padding: 20px;
     border: 10px solid #FFCCCC;
     background: #CCCCFF;
 }
@@ -119,8 +133,9 @@ p.a {
     display: block;
     height: 100%;
     background: #CCFFCC;
-    line-height: 40px;
+    line-height: 60px;
 }
+
 
 </style>
 <h1>小小小小天地_第三頁</h1>
@@ -136,8 +151,6 @@ p.a {
     <div id="padding-block" class="block">午餐</div>
     <div id="border-block" class="block">晚餐</div>
 </div>
-
-
 
 <h1 style="background-color:yellow;"><p><a href="../home/page_two.html" >上一頁</a></p></h1>
 <h1 style="background-color:yellow;"><p><a href="../index.html" >回首頁!</a></p></h1>
