@@ -53,6 +53,11 @@ body {
 	height:auto;
  	
 }
+#menu ul li ul li a {
+	/* 覆寫繼承自第一層的浮動設定 */
+	float:none;
+	height: 100%;/* 註：display、height、padding繼承第一層的設定 */
+}
 /* ---------- 隱藏與顯示階層 ---------- */
 #menu ul li ul {
 	/* 預先隱藏第二層 */
