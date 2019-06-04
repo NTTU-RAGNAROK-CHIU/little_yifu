@@ -48,56 +48,6 @@ body {
 }
 /* ---------- 大小與定位 ---------- */
 
-#menu ul li ul {
-	/* 讓第二層ul跳脫文件流以利定位 */
-	position:absolute;
-	/* 固定寬度 */
-	width:200px;
-	/* 避免出現捲軸 */
-	overflow:visible;
-	/* 讓ul與母階層li相同位置 */
-	clear:left;
-	margin-top: 100px;
-	margin-right: 0;
-	margin-bottom: 0;
-	margin-left: 0;
-}
-/* 修正IE7絕對定位差異 */
-*:first-child+html #menu ul li ul {
-	margin-top:0;
-}
-/* 修正IE6絕對定位差異 */
-* html #menu ul li ul {
-	margin-top:0;
-}
-#menu ul li ul li {
-	/* 覆寫繼承自第一層的浮動設定 */
-	float:none;
-	text-align: center;
-	
-}
-#menu ul li ul li a {
-	/* 覆寫繼承自第一層的浮動設定 */
-	float:none;
-	width: 100%;/* 註：display、height、padding繼承第一層的設定 */
-}
-#menu ul li ul li ul {
-	margin-top: 50px;
-	margin-right: 0;
-	margin-bottom: 0;
-	margin-left: 100px;
-	width: 100%;
-}
-/* 修正IE7絕對定位差異 */
-*:first-child+html #menu ul li ul li ul {
-	margin-top:50px;
-}
-#menu ul li ul li ul li {
-/* width、float繼承第二層，免設定 */
-}
-#menu ul li ul li ul li a {
-/* width、float繼承第二層，免設定 */
-}
 /* ---------- 隱藏與顯示階層 ---------- */
 #menu ul li ul {
 	/* 預先隱藏第二層 */
@@ -175,22 +125,16 @@ body {
   <ul>
     <li> <a href="#">現象</a>
       <ul>
-        <li><a href="#">回頭症</a>
-		</li>
-        <li><a href="#">學習環境無法</a>
-		</li>
+        <li><a href="#">回頭症</a></li>
+        <li><a href="#">學習環境無法</a></li>
       </ul>
     </li>
     <li> <a href="#">指導</a>
       <ul>
-        <li><a href="#Broccoli">事前準備</a>
-		</li>
-        <li><a href="#Cabbage">實際做法</a>
-		</li>
-        <li><a href="#Peas">需要注意的事</a>
-		</li>
-        <li><a href="#Onion">例子</a>
-		</li>
+        <li><a href="#Broccoli">事前準備</a></li>
+        <li><a href="#Cabbage">實際做法</a></li>
+        <li><a href="#Peas">需要注意的事</a></li>
+        <li><a href="#Onion">例子</a></li>
       </ul>
     </li>
     <li> <a href="#Meats">來源資料</a>
@@ -201,7 +145,7 @@ body {
         </li>
       </ul>
     </li>
-	<li> <a href="#Meats">影片區</a>
+	    <li> <a href="#Meats">影片區</a>
       <ul>
         <li> <a href="#White_Meat">個人影片</a>
         </li>
