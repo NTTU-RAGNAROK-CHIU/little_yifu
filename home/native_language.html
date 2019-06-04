@@ -4,28 +4,35 @@
 <head>
   <title>如何在家與孩子學習母語</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale="1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-</head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
+
+@media(max-width: 640vw){
+  .row>div>div{
+   height: 300px !important;
+ }
+
 body { 
-  height: 30vmin;
-  width: 120vmin;
+  top: 0%;
+  left: 0%;
+  right:0%;
   background-image: url("http://www.jituwang.com/uploads/allimg/111230/2238-11123002333964.jpg");
-  
+  font-family: notoserifcjktc;
 }
  .menu {
      height: 20vh;
-     width: 100vw;
-     background-color:  ;
+	 width: 20vw;
      float: down;
      opacity:1;
  }
  .opacity{
- 	opacity:0.85;
+ 	opacity:0.6;
 	font-size:20px;
+	z-index:1;
  }
  /*.top{
 
@@ -40,8 +47,9 @@ body {
 /* ---------- 大小與定位 ---------- */
 #menu {
 	/* 選單大小 */
-	width:600vx;
-	height:200px;
+	width:600vx auto;
+	height:200px auto;
+
  	
 }
 #menu ul {
@@ -101,6 +109,7 @@ body {
 	/* 覆寫繼承自第一層的浮動設定 */
 	float:none;
 	text-align: center;
+	
 }
 #menu ul li ul li a {
 	/* 覆寫繼承自第一層的浮動設定 */
@@ -108,7 +117,7 @@ body {
 	width: 100%;/* 註：display、height、padding繼承第一層的設定 */
 }
 #menu ul li ul li ul {
-	margin-top: -30px;
+	margin-top: 50px;
 	margin-right: 0;
 	margin-bottom: 0;
 	margin-left: 100px;
@@ -116,7 +125,7 @@ body {
 }
 /* 修正IE7絕對定位差異 */
 *:first-child+html #menu ul li ul li ul {
-	margin-top:-30px;
+	margin-top:50px;
 }
 #menu ul li ul li ul li {
 /* width、float繼承第二層，免設定 */
@@ -155,7 +164,7 @@ body {
 /* 預設字體 */
 #menu {
 	font-size:40px;
-	font-family:Arial, Helvetica, sans-serif;
+	font-family:notoserifcjktc, sans-serif;
 }
 /* 第一層ul背景色彩與邊框 */
 #menu ul {
@@ -170,6 +179,7 @@ body {
 /*第二層ul背景色彩與邊框  */
 #menu ul li ul {
 	background:#efefef;
+	z-index:2;
 }
 /* 第二層a字型 */
 #menu ul li ul li a {
@@ -188,11 +198,12 @@ body {
 #menu ul li ul li:hover, #menu ul li ul li a:hover {
 	background:#dfdfdf;
 }
+
 </style>
 <body>
 
-<div class="jumbotron text-center" >
-    <h1>如何在家與孩子學習母語</h1>
+<div class="jumbotron text-center" style="max-width:100vw "center >
+    <h1>勇敢追逐自己的色彩</h1>
   	<h2>How to learn a native language with the childs at home</h2> 
   	</div>
 <div id="menu">
@@ -203,7 +214,7 @@ body {
         <li><a href="#">學習環境無法</a></li>
       </ul>
     </li>
-    <li> <a href="#">指導方式</a>
+    <li> <a href="#">指導</a>
       <ul>
         <li><a href="#Broccoli">事前準備</a></li>
         <li><a href="#Cabbage">實際做法</a></li>
@@ -211,17 +222,25 @@ body {
         <li><a href="#Onion">例子</a></li>
       </ul>
     </li>
-    <li> <a href="#Meats">相關資料</a>
+    <li> <a href="#Meats">來源資料</a>
       <ul>
         <li> <a href="#White_Meat">現象_資料</a>
         </li>
-        <li> <a href="#Red_Meat">指導方式_資料</a>
+        <li> <a href="#Red_Meat">指導_資料</a>
+        </li>
+      </ul>
+    </li>
+	    <li> <a href="#Meats">影片區</a>
+      <ul>
+        <li> <a href="#White_Meat">個人影片</a>
+        </li>
+		<li> <a href="#White_Meat">其他影片</a>
         </li>
       </ul>
     </li>
   </ul>
 </div>
-<div class="menu"><img src="https://telegram.how/images/Live-Locations01.jpg" alt="Smiley face" height="400" hspace="300"></div>
+<div class="menu"><img src="https://telegram.how/images/Live-Locations01.jpg" alt="Smiley face" height="300" hspace="300"></div>
 <div class="container">
   <div class="row">
     <div class="col-sm-4">
@@ -237,7 +256,7 @@ body {
 </div>
 </div>
 <br></br>
-<div class="menu"><img src="https://telegram.how/images/themes-accounts01.jpeg" alt="Smiley face" height="400" hspace="300"></div>
+<div class="menu"><img src="https://telegram.how/images/themes-accounts01.jpeg" alt="Smiley face" height="300" hspace="300"></div>
 <div class="container">
     <div class="col-sm-4">
 	  <div class="opacity">
@@ -250,7 +269,7 @@ body {
 </div>
 </div>
 <br></br>
-<div class="menu"><img src="https://i.imgur.com/UlhKRPm.jpg" alt="Smiley face" height="400" hspace="300"></div>
+<div class="menu"><img src="https://i.imgur.com/UlhKRPm.jpg" alt="Smiley face" height="300" hspace="300"></div>
 <div class="container">
     <div class="col-sm-4">
 	<div class="opacity">
