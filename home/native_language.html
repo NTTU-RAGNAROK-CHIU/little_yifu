@@ -11,7 +11,12 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <style>
-
+#mouse{
+    width:100%;
+    height:100%;
+    border:1px solid black;
+    cursor:url("../home/5487.ico");
+}
 @media(max-width: 300vw){
   .row>div>div{
    height: 300px !important;
@@ -143,6 +148,8 @@ img {
     }
 </style>
 <body>
+<div id="mouse"></div>
+
 <script>
 $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();   
