@@ -9,6 +9,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script>
+　 　　function resize(){
+　 　　　　 parent.document.getElementById("mainframe").height=document.body.scrollHeight; 　　　
+　　　　 }
+　</script>
 </head>
 <style>
 
@@ -245,7 +250,7 @@ $(document).ready(function(){
 			<div class="container">			
 			    <div class="col-sm-4">
 				<div class="opacity">
-					<iframe src="https://onedrive.live.com/embed?cid=E87E4D55046399FC&amp;resid=E87E4D55046399FC%215352&amp;authkey=AN47G97HT4ZrjC8&amp;em=2&amp;wdAr=1.7777777777777777" width="100%" height="50%" frameborder="0">這是 <a target="_blank" href="https://office.com/webapps">Office Online</a> 提供的內嵌 <a target="_blank" href="https://office.com">Microsoft Office</a> 簡報。</iframe>
+					<iframe name="mainframe" src="https://onedrive.live.com/embed?cid=E87E4D55046399FC&amp;resid=E87E4D55046399FC%215352&amp;authkey=AN47G97HT4ZrjC8&amp;em=2&amp;wdAr=1.7777777777777777" margin= "auto" width="300vw" height="300vw" frameborder="0">這是 <a target="_blank" href="https://office.com/webapps">Office Online</a> 提供的內嵌 <a target="_blank" href="https://office.com">Microsoft Office</a> 簡報。</iframe>
 				</div>
 				</div>
 			</div>
