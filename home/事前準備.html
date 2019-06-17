@@ -1,0 +1,296 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <title>如何在家與孩子學習母語</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<style>
+
+
+@media(max-width: 300vw){
+  .row>div>div{
+   height: 300px !important;
+ }
+
+body { 
+  top: 0%;
+  left: 0%;
+  right:0%;
+  background-image: url("http://www.jituwang.com/uploads/allimg/111230/2238-11123002333964.jpg");
+  font-family:  sourcehansans-sc;
+  
+}
+ .menu {
+     height: 20vh;
+	 width: 20vw;
+     float: down;
+     opacity:1;
+ }
+  .down {
+     height: 30vh;
+	 width: auto;
+     background:#6f6f61;
+     opacity:1;
+ }
+ 
+ .opacity{
+ 	opacity:0.9;
+	font-size:40px;
+    color:#078888;
+	z-index:2;
+    font-family:  sourcehansans-sc;
+ }
+
+ /*.top{
+
+     background-color: #f5f595;
+     width: 100vw;
+     float: top;
+ }*/
+ /* 加載csshover3.htc，解決IE6沒有li:hover擬類的問題 */
+* html body {
+	behavior:url("csshover3.htc");
+}
+/* ---------- 大小與定位 ---------- */
+#menu {
+	/* 選單大小 */
+	width:60vx auto;
+	height:auto;
+ 	
+}
+#menu ul li ul li a {
+	/* 覆寫繼承自第一層的浮動設定 */
+	float:none;
+	height: 100%;/* 註：display、height、padding繼承第一層的設定 */
+}
+/* ---------- 隱藏與顯示階層 ---------- */
+#menu ul li ul {
+	/* 預先隱藏第二層 */
+	visibility:hidden;
+}
+#menu ul li:hover ul {
+	/* 觸動第一層時，顯示第二層 */
+	visibility:visible;
+}
+#menu ul li:hover ul li ul {
+	/* 顯示第二層時，隱藏第三層，避免同時彈出 */
+	visibility:hidden;
+}
+#menu ul li ul li:hover ul {
+	/* 觸動第二層時，顯示第三層 */
+	visibility:visible;
+}
+#menu ul li ul li:hover ul li ul {
+	/* 顯示第三層時，隱藏第四層，避免同時彈出 */
+	visibility:hidden;
+}
+#menu ul li ul li ul li:hover ul {
+	/* 觸動第三層時，顯示第四層 */
+	visibility:visible;
+}
+/* ---------- 以下為美化用，非必需 ---------- */
+
+
+/* 預設字體 */
+#menu {
+	font-size:30px;
+	font-family:notoserifcjktc, sans-serif;
+}
+/* 第一層ul背景色彩與邊框 */
+#menu ul {
+	background:#6f6f61;
+}
+/* 第一層a字型 */
+#menu ul li a {
+	color:#cfc;
+	text-decoration:none;
+	line-height: 40px;
+}
+/*第二層ul背景色彩與邊框  */
+#menu ul li ul {
+	background:#efefef;
+	z-index:2;
+}
+/* 第二層a字型 */
+#menu ul li ul li a {
+	font-size:30px;
+	color:#333333;
+	text-decoration:none;
+}
+/* 觸動第一層li時，改變背景色 */
+#menu ul li:hover, #menu ul li a:hover {
+	background:#efefef;
+}
+#menu ul li:hover a {
+	color:#33a333;
+}
+/* 觸動第二層以上li時改變背景色 */
+#menu ul li ul li:hover, #menu ul li ul li a:hover {
+	background:#dfdfdf;
+}
+img {
+  width:500px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+.icon {
+  width:50px;
+  max-width: 10%;
+  height: auto;
+  border-radius: 20px;
+  float:right
+}
+.h{
+	font-size:20px;
+	
+    }
+.tooltip{
+	font-size:18px;
+	
+	opacity:1;
+	
+}
+.tooltip .tooltip-inner
+{
+	min-width:30px;
+	color: #7f7;
+	background-color:#000;
+	opacity:1;
+	font-family:notoserifcjktc;
+	padding:12px;
+	font-weight:444;
+	text-align:
+	
+	
+}
+.h1{
+	text-align:center;
+	font-size:50px;
+    font-weight: 999;
+}
+
+.t1 {
+ text-align: center; 
+}
+</style>
+<body>
+<script src='https://unpkg.com/vue/dist/vue.js&#39;></script>
+<script src='https://unpkg.com/vue-i18n/dist/vue-i18n.js&#39;></script>
+<div id="wrap">
+  <h1 v-html="$t('message.hello')"></h1>
+  <h1 v-html="$t('message.minwt')"></h1>
+</div>
+
+
+const messages = {
+  en: {
+    message: {
+      hello: 'hello'
+
+    }
+  },
+  tw: {
+    message: {
+      hello: '哈囉'
+
+    }
+  },
+  cn: {
+    message: {
+      hello: '哈啰'
+
+    }
+  },
+  jp: {
+    message: {
+      hello: 'ハロー'
+
+    }
+  }
+}
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+
+<script type="text/javascript" src="http://skype.tom.com/script/skypeCheck40.js"> </script>
+<script src="https://swc.cdn.skype.com/sdk/v1/sdk.min.js"></script>
+<div class="jumbotron text-center" style="max-width:100vw "center >
+    <h1>如何在家與孩子學習母語</h1>
+  	<h3>How to learn a native language with the childs at home</h3> 
+    <h3></br>指導老師:張學謙</br><h3><h4>資工四甲 10411134 邱義夫</h4>
+</div>
+<div class="skype-button bubble" data-contact-id="loki02tw"></div>
+<div id="menu">
+  <ul>
+    <li> <a href="#現象">現象</a>
+      <ul>
+        <li><a href="../home/越頭症.html">越頭症</a></li>
+        <li><a href="../home/缺乏環境.html">缺乏環境</a></li>
+		<li><a href="../home/雙語教育優點與差異.html">雙語教育優點與差異</a></li>
+      </ul>
+    </li>
+    <li> <a href="#todo">指導</a>
+      <ul>
+        <li><a href="#事前準備">事前準備</a></li>
+        <li><a href="#實際做法">實際做法</a></li>
+        <li><a href="#需要注意的事">需要注意的事</a></li>
+        <li><a href="#例子">例子</a></li>
+      </ul>
+    </li>
+    <li> <a href="#來源資料">來源資料</a>
+      <ul>
+        <li> <a href="#現象_資料">現象_資料</a>
+        </li>
+        <li> <a href="#指導_資料">指導_資料</a>
+        </li>
+      </ul>
+    </li>
+	    <li> <a href="#影片區">影片區</a>
+      <ul>
+        <li> <a href="#個人影片">個人影片</a>
+        </li>
+		<li> <a href="#其他影片">其他影片</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<br>
+<! ---------- 以下為更動部分 ---------- >
+<div class=h1>事前準備</div>
+			<div class="t1"><iframe width="80%" height="408" src="https://www.youtube.com/embed/PWCW1ahxa1I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>     
+	<div class="opacity">
+      <div class="well well-sm">
+		<h1>事前準備1</h1>
+		<h2>分析問題與狀況</h2>
+		<h4 href="https://data.gov.tw/">政府開放資料平台</h4>
+		<a>說明:收集資料在這個資訊爆炸時代是很輕鬆的，但是如果這個資料突然很急或是易變動的話，是比較難透過簡單的收尋找到的。</a>
+		<a href="https://data.gov.tw/">政府開放資料平台是屬於政府所管理的資料庫平台，上面放了很多不同領域的資料進行彙整，編排，透過不一樣的檔案類型，做不一樣的應用。ex:CSV、JSON、XML、XLS、ODS、ZIP1、XLSX16、WEBSERVICES7、ODT5、PDF3。</a>
+		<div>
+				<img src="https://3.bp.blogspot.com/-pUe0PGzcmGM/W_-aLQqlhJI/AAAAAAAGSyM/dP7cs6V0uhYUvAA4ucWpofqGfUSHu8btQCLcBGAs/s640/Chartify-01.PNG"></img>
+		</div>
+		<h4>g0v</h4>
+
+
+		<h1>hello</h1>
+	  </div>
+	</div>
+    </div>
+
+
+</div>
+<div class="down">
+
+</div>
+
+</body>
+</html>
