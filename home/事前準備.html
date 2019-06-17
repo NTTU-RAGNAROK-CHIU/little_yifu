@@ -9,6 +9,34 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script>
+const messages = {
+  en: {
+    message: {
+      hello: 'hello'
+
+    }
+  },
+  tw: {
+    message: {
+      hello: '哈囉'
+
+    }
+  },
+  cn: {
+    message: {
+      hello: '哈啰'
+
+    }
+  },
+  jp: {
+    message: {
+      hello: 'ハロー'
+
+    }
+  }
+}
+</script>
 </head>
 <style>
 
@@ -187,34 +215,7 @@ img {
   <h1 v-html="$t('message.hello')"></h1>
   <h1 v-html="$t('message.minwt')"></h1>
 </div>
-<script>
-const messages = {
-  en: {
-    message: {
-      hello: 'hello'
 
-    }
-  },
-  tw: {
-    message: {
-      hello: '哈囉'
-
-    }
-  },
-  cn: {
-    message: {
-      hello: '哈啰'
-
-    }
-  },
-  jp: {
-    message: {
-      hello: 'ハロー'
-
-    }
-  }
-}
-</script>
 <script>
 $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();   
