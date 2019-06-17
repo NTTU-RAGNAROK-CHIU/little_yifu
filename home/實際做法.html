@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="zh-Hant-TW">
+<html lang="tw">
 <head>
   <title>如何在家與孩子學習母語</title>
   <meta charset="utf-8">
@@ -9,6 +9,34 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script>
+const messages = {
+  en: {
+    message: {
+      hello: 'hello'
+
+    }
+  },
+  tw: {
+    message: {
+      hello: '哈囉'
+
+    }
+  },
+  cn: {
+    message: {
+      hello: '哈啰'
+
+    }
+  },
+  jp: {
+    message: {
+      hello: 'ハロー'
+
+    }
+  } 
+}
+</script>
 </head>
 <style>
 
@@ -41,7 +69,7 @@ body {
  
  .opacity{
  	opacity:0.9;
-	font-size:40px;
+	font-size:30px;
     color:#078888;
 	z-index:2;
     font-family:  sourcehansans-sc;
@@ -138,8 +166,9 @@ img {
   width:500px;
   max-width: 100%;
   height: auto;
-  margin:auto;
   border-radius: 20px;
+  margin:auto;
+  text-align:center;
 }
 .icon {
   width:50px;
@@ -167,7 +196,7 @@ img {
 	font-family:notoserifcjktc;
 	padding:12px;
 	font-weight:444;
-	text-align:
+	
 	
 	
 }
@@ -180,9 +209,16 @@ img {
 
 .t1 {
  text-align: center; 
+ margin:auto;
 }
 </style>
 <body>
+<script src='https://unpkg.com/vue/dist/vue.js&#39;></script>
+<script src='https://unpkg.com/vue-i18n/dist/vue-i18n.js&#39;></script>
+<div id="wrap">
+  <h1 v-html="$t('message.hello')"></h1>
+  <h1 v-html="$t('message.minwt')"></h1>
+</div>
 
 <script>
 $(document).ready(function(){
@@ -219,33 +255,11 @@ $(document).ready(function(){
 </div>
 <br>
 <! ---------- 以下為更動部分 ---------- >
-<div class=h1>越頭症</div>
-			<div class="t1"><iframe width="80%" height="408" src="https://www.youtube.com/embed/PWCW1ahxa1I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>     
+<div class=t1>
+<div class=h1>實際做法</div>
 	<div class="opacity">
       <div class="well well-sm">
-	        <h2>越頭症</h2>        
-			</br>       
-			隨著環境變化，長輩對於小孩子教育可能較偏向華語教育，對於本土的母語已經出現母語流失的窘境。
-            </br>	
-			<div>
-				<img src="https://i.imgur.com/pD3QCER.jpg"></img>
-			</div>
-			</br>
-            而本文就是來探討越頭症，這個社會的集體現象。
-			</br>對於母語教育，在學校可能會常常使用華語，華語教育本身人口龐大，而筆者覺得如果可以進行雙語教育輔助母語學習，可能會讓教育文化多元發展。</br>
-			隨後，我們會加入一些觀察及想法提出相關的討論。
-			<div>
-				<img src="https://englishlive.ef.com/zh-tw/blog/wp-content/uploads/sites/15/2017/02/blog_190501_07.jpg"></img>
-				<img src="https://im2.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/076/67/0010766749.jpg&v=59d2234c&w=348&h=348"></img>
-			</div>
-			</br>
-			<a href="https://www.books.com.tw/products/0010766749">台語好日子</a>
-	  </div>
-	</div>
-    </div>
-
-
-</div>
+		
 <div class="down">
 
 </div>
