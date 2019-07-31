@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+	var HttpClient = function(){
+	this.get = function(aUrl, aCallback){
+	    var anHttpRequest = new XMLHttpRequest();
+		anHttpRequest.onreadystatechange= function(){
+			if(anHttpRequest.readyState==4 && anHttpRequest.status==200)
+				aCallback(anHttpRequest.responseText);
+		}
+		anHttpRequest.open("GEt",aUrl,true);
+		anHttpRequest.send(null);
+	}	
+}
+	var theurl='https://opendata.cwb.gov.tw/api/v1/rest/datastore/O-A0003-001?Authorization=CWB-AE813749-E5EF-4738-9055-2B9F083B05AE&format=JSON'
+	var client = new HttpClient();
+			client.get(theurl, function(response){
+			var text = "";
+			var ans=["\n"]
+			var response1 = JSON.parse(response);
+			//alert(response);
+			//document.getElementById('成功接收').innerHTML = response1.success;
+			//document.getElementById('id').innerHTML = response1.result.resource_id;
+			//document.getElementById('名稱').innerHTML = response1.records.location[0].weatherElement.elementName;
+			for(a=0;a<44;a++){
+			ans[a] = ["\n"]
+			ans[a] += response1.records.location[a].locationName;
+			ans[a] += "緯度:"+response1.records.location[a].lat;
+			ans[a] += "經度:"+response1.records.location[a].lon;
+			ans[a] += response1.records.location[a].time.obsTime;
+			ans[a] += "風向:"+" "+response1.records.location[a].weatherElement[1].elementValue+" "+"度";
+			ans[a] += "風速:"+" "+response1.records.location[a].weatherElement[2].elementValue+" "+"公尺/秒";
+			document.write(ans[a]+'\n');
+			document.write('<br>');
+			
+			}
+			
+			
+			
+			
+	});
+			
+	</script>
+
+
+</head>
+	<body>
+
+		<center>
+		</br>
+		
+
+		
+		</center>
+	
+	
+	</body>
+</html>
