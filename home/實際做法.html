@@ -1,10 +1,227 @@
 
 <!DOCTYPE html>
 <html lang="tw">
+<body>
+<head>
+  <title>如何在家與孩子學習母語</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script>
+const messages = {
+  en: {
+    message: {
+      hello: 'hello'
+
+    }
+  },
+  tw: {
+    message: {
+      hello: '哈囉'
+
+    }
+  },
+  cn: {
+    message: {
+      hello: '哈啰'
+
+    }
+  },
+  jp: {
+    message: {
+      hello: 'ハロー'
+
+    }
+  } 
+}
+</script>
+</head>
+<style>
+
+
+@media(max-width: 300vw){
+  .row>div>div{
+   height: 300px !important;
+ }
+
+body { 
+  top: 0%;
+  left: 0%;
+  right:0%;
+  background-image: url("http://www.jituwang.com/uploads/allimg/111230/2238-11123002333964.jpg");
+  font-family:  sourcehansans-sc;
+
+}
+ .menu {
+     height: 20vh;
+	 width: 20vw;
+     float: down;
+     opacity:1;
+ }
+  .down {
+     height: 30vh;
+	 width: auto;
+     background:#6f6f61;
+     opacity:1;
+ }
+
+ .opacity{
+ 	opacity:0.9;
+	font-size:40px;
+    color:#078888;
+	z-index:2;
+    font-family:  sourcehansans-sc;
+ }
+
+ /*.top{
+     background-color: #f5f595;
+     width: 100vw;
+     float: top;
+ }*/
+ /* 加載csshover3.htc，解決IE6沒有li:hover擬類的問題 */
+* html body {
+	behavior:url("csshover3.htc");
+}
+/* ---------- 大小與定位 ---------- */
+#menu {
+	/* 選單大小 */
+	width:60vx auto;
+	height:auto;
+
+}
+#menu ul li ul li a {
+	/* 覆寫繼承自第一層的浮動設定 */
+	float:none;
+	height: 100%;/* 註：display、height、padding繼承第一層的設定 */
+}
+/* ---------- 隱藏與顯示階層 ---------- */
+#menu ul li ul {
+	/* 預先隱藏第二層 */
+	visibility:hidden;
+}
+#menu ul li:hover ul {
+	/* 觸動第一層時，顯示第二層 */
+	visibility:visible;
+}
+#menu ul li:hover ul li ul {
+	/* 顯示第二層時，隱藏第三層，避免同時彈出 */
+	visibility:hidden;
+}
+#menu ul li ul li:hover ul {
+	/* 觸動第二層時，顯示第三層 */
+	visibility:visible;
+}
+#menu ul li ul li:hover ul li ul {
+	/* 顯示第三層時，隱藏第四層，避免同時彈出 */
+	visibility:hidden;
+}
+#menu ul li ul li ul li:hover ul {
+	/* 觸動第三層時，顯示第四層 */
+	visibility:visible;
+}
+/* ---------- 以下為美化用，非必需 ---------- */
+
+
+/* 預設字體 */
+#menu {
+	font-size:30px;
+	font-family:notoserifcjktc, sans-serif;
+}
+/* 第一層ul背景色彩與邊框 */
+#menu ul {
+	background:#6f6f61;
+}
+/* 第一層a字型 */
+#menu ul li a {
+	color:#cfc;
+	text-decoration:none;
+	line-height: 40px;
+}
+/*第二層ul背景色彩與邊框  */
+#menu ul li ul {
+	background:#efefef;
+	z-index:2;
+}
+/* 第二層a字型 */
+#menu ul li ul li a {
+	font-size:30px;
+	color:#333333;
+	text-decoration:none;
+}
+/* 觸動第一層li時，改變背景色 */
+#menu ul li:hover, #menu ul li a:hover {
+	background:#efefef;
+}
+#menu ul li:hover a {
+	color:#33a333;
+}
+/* 觸動第二層以上li時改變背景色 */
+#menu ul li ul li:hover, #menu ul li ul li a:hover {
+	background:#dfdfdf;
+}
+img {
+  width:500px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  margin:auto;
+  text-align:center;
+}
+.icon {
+  width:50px;
+  max-width: 10%;
+  height: auto;
+  border-radius: 20px;
+  float:right
+}
+.h{
+	font-size:20px;
+
+    }
+.tooltip{
+	font-size:18px;
+
+	opacity:1;
+
+}
+.tooltip .tooltip-inner
+{
+	min-width:30px;
+	color: #7f7;
+	background-color:#000;
+	opacity:1;
+	font-family:notoserifcjktc;
+	padding:12px;
+	font-weight:444;
+
+
+
+}
+.h1{
+	text-align:center;
+	font-size:50px;
+    font-weight: 999;
+	text-align:center;
+}
+
+.t1 {
+ text-align: center; 
+ margin:auto;
+}
+.t2{
+	width:50%;
+    margin:auto;
+	}
+
+</style>
 <link rel="import" href="./style.html">
 <body>
 
 <script>
+
 $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();   
 });
